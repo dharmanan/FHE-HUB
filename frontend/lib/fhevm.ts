@@ -1,5 +1,5 @@
 import type { TypedDataDomain, TypedDataField } from "ethers";
-import { Contract, Signer, type InterfaceAbi } from "ethers";
+import { Contract, Signer, getAddress, type InterfaceAbi } from "ethers";
 
 type EncryptedInputBuilder = {
   add64: (value: number | bigint) => EncryptedInputBuilder;
@@ -188,7 +188,12 @@ export async function encryptValue(
   contractAddress: string,
 ): Promise<{ handle: string; inputProof: string }> {
   const instance = await getFhevmInstance();
-  const encryptedInput = instance.createEncryptedInput(contractAddress, userAddress);
+  
+  // Ensure addresses are checksummed to avoid "Bad address checksum" error
+  const checksummedUser = getAddress(userAddress);
+  const checksummedContract = getAddress(contractAddress);
+  
+  const encryptedInput = instance.createEncryptedInput(checksummedContract, checksummedUser);
   // We encode amounts as 64-bit integers. Callers may pass bigint (recommended) or number.
   encryptedInput.add64(value);
   const result = await encryptedInput.encrypt();
@@ -217,17 +222,21 @@ export async function decryptHandles(
 ): Promise<bigint[]> {
   const instance = await getFhevmInstance();
 
+  // Ensure addresses are checksummed
+  const checksummedUser = getAddress(userAddress);
+  const checksummedContract = getAddress(contractAddress);
+
   const normalizedHandles = handles.map((h) =>
     typeof h === "bigint" ? bigintTo0x32(h) : normalize0xHex(h),
   );
 
-  const keypair = loadOrCreateUserKeypair(instance, userAddress);
+  const keypair = loadOrCreateUserKeypair(instance, checksummedUser);
   const startTimestamp = Math.floor(Date.now() / 1000);
   const durationDays = 7;
 
   const typedData = instance.createEIP712(
     keypair.publicKey,
-    [contractAddress],
+    [checksummedContract],
     startTimestamp,
     durationDays,
   ) as unknown as Eip712TypedData;
@@ -239,12 +248,12 @@ export async function decryptHandles(
   const signature = await signer.signTypedData(typedData.domain, messageTypes, typedData.message);
 
   const results = await instance.userDecrypt(
-    normalizedHandles.map((h) => ({ handle: h, contractAddress })),
+    normalizedHandles.map((h) => ({ handle: h, contractAddress: checksummedContract })),
     keypair.privateKey,
     keypair.publicKey,
     signature,
-    [contractAddress],
-    userAddress,
+    [checksummedContract],
+    checksummedUser,
     startTimestamp,
     durationDays,
   );
