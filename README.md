@@ -201,7 +201,7 @@ The documentation generator (`scripts/generate-docs.ts`) parses these tags and g
 ## 📁 Project Structure
 
 ```
-fhevm-examples-hub/
+FHE-HUB/
 ├── fhevm-hardhat-template/       # Base Hardhat template (copied into each example)
 ├── scripts/                      # Automation tools + registry source-of-truth
 ├── examples/                     # Tracked standalone repos (core 18)
@@ -260,10 +260,6 @@ Creates GitBook-formatted documentation from contract and test files.
 ```bash
 npm run generate-docs
 ```
-
-## 🧭 Developer Guide
-
-See [DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md) for how to add new examples and keep dependencies in sync.
 
 ## 🔧 Development Workflow
 
@@ -398,7 +394,7 @@ This is a bounty submission. Feedback and suggestions are welcome!
 ## 📧 Contact
 
 - GitHub: [@dharmanan](https://github.com/dharmanan)
-- Repository: [fhevm-examples-hub](https://github.com/dharmanan/fhevm-examples-hub)
+- Repository: [FHE-HUB](https://github.com/dharmanan/FHE-HUB)
 
 ---
 
