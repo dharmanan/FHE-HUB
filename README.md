@@ -12,39 +12,37 @@
 
 ```
 FHE-HUB/
-├── FHE-BANK/                          # Main FHEVM Examples Hub
-│   ├── examples/                      # 18 Production-Ready Examples
-│   │   ├── encrypted-counter/         # Basic encrypted counter
-│   │   ├── encrypted-arithmetic/      # FHE arithmetic operations
-│   │   ├── encrypted-anti-patterns/   # Common mistakes to avoid
-│   │   ├── encrypted-blind-auction/   # Private bidding system
-│   │   ├── encrypted-equality/        # Encrypted comparisons
-│   │   └── ...more examples
-│   │
-│   ├── scripts/                       # CLI Tools
-│   │   ├── create-fhevm-example.ts    # Generate new examples
-│   │   ├── generate-docs.ts           # Build GitBook documentation
-│   │   ├── examples.ts                # Example registry (32 total)
-│   │   └── smoke-test.ts              # CI/CD validation
-│   │
-│   ├── docs/                          # Generated Documentation
-│   │   ├── SUMMARY.md                 # GitBook table of contents
-│   │   └── *.md                       # 32 example guides
-│   │
-│   ├── frontend/                      # Next.js Demo Application
-│   │   ├── app/                       # Next.js 14 App Router
-│   │   ├── components/                # React components
-│   │   ├── contracts/                 # Smart contracts
-│   │   └── lib/                       # fhevmjs integration
-│   │
-│   ├── fhevm-hardhat-template/        # Hardhat Starter
-│   ├── test-verification/             # Testing utilities
-│   │
-│   ├── VIDEO_GUIDE.md                 # 🎬 Video Recording Guide
-│   ├── DEVELOPER_GUIDE.md             # Development documentation
-│   └── package.json                   # CLI scripts
+├── examples/                      # 18 Production-Ready Examples
+│   ├── encrypted-counter/         # Basic encrypted counter
+│   ├── encrypted-arithmetic/      # FHE arithmetic operations
+│   ├── encrypted-anti-patterns/   # Common mistakes to avoid
+│   ├── encrypted-blind-auction/   # Private bidding system
+│   ├── encrypted-equality/        # Encrypted comparisons
+│   └── ...more examples
 │
-└── README.md                          # This file
+├── scripts/                       # CLI Tools
+│   ├── create-fhevm-example.ts    # Generate new examples
+│   ├── generate-docs.ts           # Build GitBook documentation
+│   ├── examples.ts                # Example registry (32 total)
+│   └── smoke-test.ts              # CI/CD validation
+│
+├── docs/                          # Generated Documentation
+│   ├── SUMMARY.md                 # GitBook table of contents
+│   └── *.md                       # 32 example guides
+│
+├── frontend/                      # Next.js Demo Application
+│   ├── app/                       # Next.js 14 App Router
+│   ├── components/                # React components
+│   ├── contracts/                 # Smart contracts
+│   └── lib/                       # fhevmjs integration
+│
+├── fhevm-hardhat-template/        # Hardhat Starter
+├── test-verification/             # Testing utilities
+│
+├── VIDEO_GUIDE.md                 # 🎬 Video Recording Guide
+├── DEVELOPER_GUIDE.md             # Development documentation
+├── package.json                   # CLI scripts
+└── README.md                      # This file
 ```
 
 ---
@@ -54,7 +52,7 @@ FHE-HUB/
 ### 1️⃣ Clone Repository
 ```bash
 git clone https://github.com/dharmanan/FHE-HUB.git
-cd FHE-HUB/FHE-BANK
+cd FHE-HUB
 ```
 
 ### 2️⃣ Install Dependencies
@@ -106,7 +104,7 @@ npm test
 - `encrypted-user-decrypt-single` - User decryption (single)
 - `encrypted-user-decrypt-multiple` - User decryption (batch)
 
-[See complete list →](./FHE-BANK/docs/SUMMARY.md)
+[See complete list →](./docs/SUMMARY.md)
 
 ---
 
@@ -128,13 +126,7 @@ npm run smoke-test -- <example-name> <output-path>
 
 ---
 
-## 🎥 Video Guide
-
-See [VIDEO_GUIDE.md](./FHE-BANK/VIDEO_GUIDE.md) for step-by-step video recording instructions.
-
----
-
-## 🌐 Live Demo
+##  Live Demo
 
 **Frontend Application:** [https://fhehub.vercel.app](https://fhehub.vercel.app)
 
@@ -148,9 +140,8 @@ The demo showcases:
 
 ## 📖 Documentation
 
-- **Developer Guide:** [DEVELOPER_GUIDE.md](./FHE-BANK/DEVELOPER_GUIDE.md)
-- **GitBook Docs:** [docs/](./FHE-BANK/docs/)
-- **Testing Guide:** [frontend/TESTING_GUIDE.md](./FHE-BANK/frontend/TESTING_GUIDE.md)
+- **GitBook Docs:** [docs/](./docs/)
+- **Testing Guide:** [frontend/TESTING_GUIDE.md](./frontend/TESTING_GUIDE.md)
 
 ---
 
@@ -192,7 +183,7 @@ The demo showcases:
 
 ## 📄 License
 
-MIT License - see [LICENSE](./FHE-BANK/LICENSE)
+MIT License - see [LICENSE](./LICENSE)
 
 ---
 

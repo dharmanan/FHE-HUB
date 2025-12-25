@@ -39,7 +39,10 @@ frontend/node_modules/
 
 # logs
 *.log
+
 # Video recording guide (keep local only)
 VIDEO_GUIDE.md
 VIDEO_SCRIPT.md
 video-*.md
+FHE-BANK-README.md
+DEVELOPER_GUIDE.md
