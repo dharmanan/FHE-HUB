@@ -1,0 +1,94 @@
+{
+  "address": "0x81Cb0B0D4EF5A374979CAebE85fCcfa3a149b24E",
+  "abi": [
+    {
+      "type": "constructor",
+      "stateMutability": "undefined",
+      "payable": false,
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "ZamaProtocolUnsupported",
+      "inputs": []
+    },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "BalanceUpdated",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "user",
+          "indexed": true
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "confidentialProtocolId",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "deposit",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "bytes32",
+          "name": "encryptedAmount"
+        },
+        {
+          "type": "bytes",
+          "name": "inputProof"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "getBalance",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "bytes32",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "transfer",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address",
+          "name": "to"
+        },
+        {
+          "type": "bytes32",
+          "name": "encryptedAmount"
+        },
+        {
+          "type": "bytes",
+          "name": "inputProof"
+        }
+      ],
+      "outputs": []
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "fhevm-examples-hub",
+  "version": "1.0.0",
+  "description": "Automated tools for generating standalone FHEVM example repositories",
+  "scripts": {
+    "create-example": "ts-node scripts/create-fhevm-example.ts",
+    "create-category": "ts-node scripts/create-fhevm-category.ts",
+    "build-examples": "ts-node scripts/build-examples.ts",
+    "generate-docs": "ts-node scripts/generate-docs.ts",
+    "generate-all-docs": "ts-node scripts/generate-docs.ts --all",
+    "smoke-test": "ts-node scripts/smoke-test.ts",
+    "test-template": "cd fhevm-hardhat-template && npm install && npm run compile && npm run test"
+  },
+  "keywords": ["fhevm", "zama", "automation", "examples", "privacy", "fhe", "bounty"],
+  "author": "dharmanan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dharmanan/fhevm-examples-hub"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.0"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "abi": [
+    {
+      "type": "function",
+      "name": "name",
+      "stateMutability": "view",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "string" }]
+    },
+    {
+      "type": "function",
+      "name": "symbol",
+      "stateMutability": "view",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "string" }]
+    },
+    {
+      "type": "function",
+      "name": "decimals",
+      "stateMutability": "view",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint8" }]
+    },
+    {
+      "type": "function",
+      "name": "FAUCET_CAP",
+      "stateMutability": "view",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint64" }]
+    },
+    {
+      "type": "function",
+      "name": "faucet",
+      "stateMutability": "nonpayable",
+      "inputs": [
+        { "name": "encryptedAmount", "type": "bytes32" },
+        { "name": "inputProof", "type": "bytes" }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "getBalance",
+      "stateMutability": "view",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint256" }]
+    },
+    {
+      "type": "function",
+      "name": "transfer",
+      "stateMutability": "nonpayable",
+      "inputs": [
+        { "name": "to", "type": "address" },
+        { "name": "encryptedAmount", "type": "bytes32" },
+        { "name": "inputProof", "type": "bytes" }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "event",
+      "name": "BalanceUpdated",
+      "inputs": [{ "name": "user", "type": "address", "indexed": true }],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "FaucetMint",
+      "inputs": [{ "name": "user", "type": "address", "indexed": true }],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "EncryptedTransfer",
+      "inputs": [
+        { "name": "from", "type": "address", "indexed": true },
+        { "name": "to", "type": "address", "indexed": true }
+      ],
+      "anonymous": false
+    }
+  ]
+}

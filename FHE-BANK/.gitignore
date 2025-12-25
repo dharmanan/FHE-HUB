@@ -1,0 +1,45 @@
+node_modules
+
+# env files (never commit)
+.env
+.env.*
+!.env.example
+
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# build / cache / generated
+artifacts/
+cache/
+typechain-types/
+.tmp-*/
+
+# Generated standalone repos (tracked), but ignore their build outputs
+examples/**/node_modules/
+examples/**/artifacts/
+examples/**/cache/
+examples/**/coverage/
+examples/**/coverage.json
+examples/**/types/
+examples/**/.next/
+examples/**/package-lock.json
+examples/**/yarn.lock
+examples/**/pnpm-lock.yaml
+examples/**/bun.lockb
+
+# Local smoke-test output (never commit)
+output/
+output/.smoke/
+.tmp-*/
+
+frontend/.next/
+frontend/out/
+frontend/node_modules/
+
+# logs
+*.log
+# Video recording guide (keep local only)
+VIDEO_GUIDE.md
+VIDEO_SCRIPT.md
+video-*.md

@@ -1,0 +1,57 @@
+{
+  "abi": [
+    {
+      "type": "function",
+      "name": "getBalance",
+      "stateMutability": "view",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint256" }]
+    },
+    {
+      "type": "function",
+      "name": "deposit",
+      "stateMutability": "nonpayable",
+      "inputs": [{ "name": "amount", "type": "uint64" }],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "withdraw",
+      "stateMutability": "nonpayable",
+      "inputs": [{ "name": "amount", "type": "uint64" }],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "transfer",
+      "stateMutability": "nonpayable",
+      "inputs": [
+        { "name": "to", "type": "address" },
+        { "name": "encryptedAmount", "type": "bytes32" },
+        { "name": "inputProof", "type": "bytes" }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "event",
+      "name": "WithdrawRequested",
+      "inputs": [
+        { "name": "requestId", "type": "uint256", "indexed": true },
+        { "name": "user", "type": "address", "indexed": true },
+        { "name": "amount", "type": "uint64", "indexed": false }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "WithdrawCompleted",
+      "inputs": [
+        { "name": "requestId", "type": "uint256", "indexed": true },
+        { "name": "user", "type": "address", "indexed": true },
+        { "name": "amount", "type": "uint64", "indexed": false },
+        { "name": "success", "type": "bool", "indexed": false }
+      ],
+      "anonymous": false
+    }
+  ]
+}

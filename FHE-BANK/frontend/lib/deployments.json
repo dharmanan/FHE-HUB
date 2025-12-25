@@ -1,0 +1,11 @@
+{
+  "network": "fhevmSepolia",
+  "balanceAddress": "0x8b81c9037e51fdA575FEeE97A5517472c55fb552",
+  "privateZamaTokenAddress": "0x6Ba9E31291a08840C9c072C5627249188fAa606a",
+  "zamaTokenAddress": "0x837CeB5a451F9F6dc659ae3498882fBF0d0CD349",
+  "zamaVaultAddress": "0x148CB74de46217F525e465B2e4dAC2cc1ecCe3Af",
+  "collateralAddress": "0x9577b3722D2983EbCd8E247a65B71AF0711dE9b8",
+  "deployer": "0x20cDAd07152eF163CAd9Be2cDe1766298B883d71",
+  "timestamp": "2025-12-23T16:53:25.267Z",
+  "chainId": "11155111"
+}
