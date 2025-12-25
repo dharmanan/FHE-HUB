@@ -24,6 +24,16 @@ This repo tracks a curated **core set** of standalone Hardhat repos under [examp
 
 ## 🚀 Quick Start
 
+### Setup
+
+First, clone and install dependencies:
+
+```bash
+git clone https://github.com/dharmanan/FHE-HUB.git
+cd FHE-HUB
+npm install
+```
+
 ### List Available Examples
 
 ```bash
