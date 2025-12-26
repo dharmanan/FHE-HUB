@@ -383,8 +383,8 @@ This project demonstrates:
 - Tag-based organization (@chapter, @test, @title) ✓
 
 **🎥 Video Demonstration**
-- 📝 Status: To be recorded
-- Will include: Setup, CLI demos, example generation, test execution, automation showcase
+- � **Watch the full demo**: [YouTube Video](https://www.youtube.com/watch?v=rsNJX-QOMFA)
+- Includes: Setup, CLI demos, example generation, test execution, and automation showcase
 
 ### Repository Statistics
 - **Total Examples**: 32 (registry)
